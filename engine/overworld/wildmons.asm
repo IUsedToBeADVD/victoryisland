@@ -484,6 +484,7 @@ ApplyAbilityEffectsOnEncounterMon:
 	dbw STENCH,        .Stench
 	dbw VITAL_SPIRIT,  .VitalSpirit
 	dbw WHITE_SMOKE,   .WhiteSmoke
+	dbw STORM_DRAIN,   .StormDrain
 	dbw -1, -1
 
 .ArenaTrap:
@@ -542,6 +543,10 @@ ApplyAbilityEffectsOnEncounterMon:
 .MagnetPull:
 	push bc
 	ld c, STEEL
+	jr .force_wildtype
+.StormDrain:
+	push bc
+	ld c, WATER
 	jr .force_wildtype
 .LightningRod:
 .Static:

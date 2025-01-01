@@ -6,5 +6,6 @@ TypeNullificationAbilities:
 	db WATER_ABSORB,  WATER
 	db FLASH_FIRE,    FIRE
 	db SAP_SIPPER,    GRASS
+	db STORM_DRAIN,   WATER
 ; Levitate is checked seperately due to Iron Ball shenanigans
 	db -1

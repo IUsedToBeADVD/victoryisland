@@ -158,4 +158,5 @@
 	const SHARPNESS
 	const ARMOR_TAIL
 	const GOOEY
+	const STORM_DRAIN
 DEF NUM_ABILITIES EQU const_value

@@ -973,6 +973,7 @@ NullificationAbilities:
 	dbw DRY_SKIN, DrySkinAbility
 	dbw FLASH_FIRE, FlashFireAbility
 	dbw LIGHTNING_ROD, LightningRodAbility
+	dbw STORM_DRAIN, StormDrainAbility
 	dbw MOTOR_DRIVE, MotorDriveAbility
 	dbw SAP_SIPPER, SapSipperAbility
 	dbw VOLT_ABSORB, VoltAbsorbAbility
@@ -1041,6 +1042,7 @@ SapSipperAbility:
 AttackUpAbility:
 	ld b, ATTACK
 	jr StatUpAbility
+StormDrainAbility:
 LightningRodAbility:
 	ld b, SP_ATTACK
 	jr StatUpAbility
@@ -1071,6 +1073,8 @@ StatUpAbility:
 ; Lightning Rod, Motor Drive and Sap Sipper prints a "doesn't affect" message instead.
 	call GetTrueUserAbility
 	cp LIGHTNING_ROD
+	jr z, .print_immunity
+	cp STORM_DRAIN
 	jr z, .print_immunity
 	cp MOTOR_DRIVE
 	jr z, .print_immunity

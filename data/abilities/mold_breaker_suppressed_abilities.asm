@@ -48,4 +48,5 @@ MoldBreakerSuppressedAbilities:
 	db WATER_VEIL
 	db WHITE_SMOKE
 	db WONDER_SKIN
+	db STORM_DRAIN
 	db -1
