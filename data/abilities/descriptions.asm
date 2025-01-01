@@ -154,6 +154,7 @@ AbilityDescriptions:
 	dw CudChewDescription
 	dw SharpnessDescription
 	dw ArmorTailDescription
+	dw GooeyDescription
 	assert_table_length NUM_ABILITIES
 
 NoAbilityDescription:
@@ -860,6 +861,7 @@ CorrosionDescription:
 	next1 "can be poisoned."
 	done
 
+GooeyDescription:
 TanglingHairDescription:
 	text  "Contact may lower"
 	next1 "the foe's Speed."

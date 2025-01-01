@@ -154,6 +154,7 @@ AbilityNames:
 	dw CudChew
 	dw Sharpness
 	dw ArmorTail
+	dw Gooey
 	assert_table_length NUM_ABILITIES
 
 NoAbility:       rawchar "---@"
@@ -310,3 +311,4 @@ ScreenCleaner:   rawchar "Screen Cleaner@"
 CudChew:         rawchar "Cud Chew@"
 Sharpness:       rawchar "Sharpness@"
 ArmorTail:       rawchar "Armor Tail@"
+Gooey:			 rawchar "Gooey@"

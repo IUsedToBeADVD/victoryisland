@@ -157,4 +157,5 @@
 	const CUD_CHEW
 	const SHARPNESS
 	const ARMOR_TAIL
+	const GOOEY
 DEF NUM_ABILITIES EQU const_value

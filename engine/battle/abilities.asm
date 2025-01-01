@@ -733,6 +733,7 @@ TargetContactAbilities:
 	dbw POISON_POINT, PoisonPointAbility
 	dbw STATIC, StaticAbility
 	dbw CUTE_CHARM, CuteCharmAbility
+	dbw GOOEY, GooeyAbility
 	dbw TANGLING_HAIR, TanglingHairAbility
 	dbw PERISH_BODY, PerishBodyAbility
 	dbw -1, -1
@@ -778,6 +779,7 @@ PerishBodyAbility:
 	call StdBattleTextbox
 	jmp EnableAnimations
 
+GooeyAbility:
 TanglingHairAbility:
 	call HasOpponentFainted
 	ret z
