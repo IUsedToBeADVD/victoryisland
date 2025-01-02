@@ -60,7 +60,18 @@ _NewGame_FinishSetup:
 	call NewGame_ClearTileMapEtc
 	call WarnVBA
 	;call SetInitialOptions
-	call ProfElmSpeech
+	;call ProfElmSpeech
+	
+	; next 8 lines just to speed up testing for now
+	ld a, 0
+	ld [wPlayerGender], a
+	ld a, 23
+	ld [wPlayerName], a
+	farcall InitClock
+	ld c, 31
+	call FadeToBlack
+	call ClearTileMap
+	
 	call InitializeWorld
 	ld a, 1
 	ld [wPrevLandmark], a
