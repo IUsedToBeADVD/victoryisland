@@ -639,8 +639,11 @@ RunFaintAbilities:
 
 _RunFaintOpponentAbilities:
 	cp AFTERMATH
+	jr z, AftermathAbility
+	cp INNARDS_OUT
+	jr z, InnardsOutAbility
 	ret nz
-	; fallthrough
+
 AftermathAbility:
 	; Damp protects against this
 	call GetOpponentAbility
@@ -654,6 +657,18 @@ AftermathAbility:
 	call ShowAbilityActivation
 	call SwitchTurn
 	call GetQuarterMaxHP
+	predef SubtractHPFromUser
+	ld hl, IsHurtText
+	call StdBattleTextbox
+	call EnableAnimations
+	jmp SwitchTurn
+
+InnardsOutAbility:
+	call DisableAnimations
+	call ShowAbilityActivation
+	call SwitchTurn
+	call GetQuarterMaxHP
+	; need to figure out how to get the opponents hp before they fainted and use that value instead
 	predef SubtractHPFromUser
 	ld hl, IsHurtText
 	call StdBattleTextbox

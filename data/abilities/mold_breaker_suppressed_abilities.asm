@@ -49,4 +49,5 @@ MoldBreakerSuppressedAbilities:
 	db WHITE_SMOKE
 	db WONDER_SKIN
 	db STORM_DRAIN
+	db INNARDS_OUT
 	db -1

@@ -156,6 +156,7 @@ AbilityDescriptions:
 	dw ArmorTailDescription
 	dw GooeyDescription
 	dw StormDrainDescription
+	dw InnardsOutDescription
 	assert_table_length NUM_ABILITIES
 
 NoAbilityDescription:
@@ -917,3 +918,9 @@ StormDrainDescription:
 	text  "Water moves"
 	next1 "boost Sp.Atk."
 	done
+
+InnardsOutDescription:
+	text  "Reflects half the"
+	next1 "damage from KO's"
+	done
+

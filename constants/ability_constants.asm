@@ -159,4 +159,5 @@
 	const ARMOR_TAIL
 	const GOOEY
 	const STORM_DRAIN
+	const INNARDS_OUT
 DEF NUM_ABILITIES EQU const_value

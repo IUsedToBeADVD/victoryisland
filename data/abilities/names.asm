@@ -156,6 +156,7 @@ AbilityNames:
 	dw ArmorTail
 	dw Gooey
 	dw StormDrain
+	dw InnardsOut
 	assert_table_length NUM_ABILITIES
 
 NoAbility:       rawchar "---@"
@@ -314,3 +315,4 @@ Sharpness:       rawchar "Sharpness@"
 ArmorTail:       rawchar "Armor Tail@"
 Gooey:			 rawchar "Gooey@"
 StormDrain:		 rawchar "Storm Drain@"
+InnardsOut:		 rawchar "Innards Out@"
