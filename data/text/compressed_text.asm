@@ -128,7 +128,7 @@ TextCompressionHuffmanTree:
 	parent_node "ó",        "¿"        ; $5b - 11010011001101000
 	parent_node $5d,        $5e        ; $5c - 11010011001101001
 	parent_node "♂",        "♀"        ; $5d - 110100110011010010
-	parent_node "É",        "ê"        ; $5e - 110100110011010011
+	parent_node "É",        "<lk>"     ; $5e - 110100110011010011
 	parent_node "<MN>",     "8"        ; $5f - 110100110011011
 	parent_node $61,        "I"        ; $60 - 110101
 	parent_node $62,        "T"        ; $61 - 1101010
@@ -296,7 +296,7 @@ endr
 ;                                       "♀"
 ;                                     ),
 ;                                     ( "É",
-;                                       "ê"
+;                                       "<lk>"
 ;                                 ) ) ),
 ;                                 "<PK>"
 ;                               ),

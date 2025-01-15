@@ -158,7 +158,7 @@ DEF FIRST_REGULAR_TEXT_CHAR EQU $7f
 	ctxtmap "é",        $c8, 1101010011100111
 	ctxtmap "É",        $c9, 1101001100110100110
 	ctxtmap "á",        $ca, 00100011110110010
-	ctxtmap "ê",        $cb, 1101001100110100111
+	ctxtmap "<lk>",     $cb, 1101001100110100111
 	ctxtmap "í",        $cc, 001000111101111011
 	ctxtmap "ó",        $cd, 110100110011010000
 
