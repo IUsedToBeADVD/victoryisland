@@ -14,7 +14,7 @@ NameInputUpper:
 	rawchar "ABCDEFGHI"
 	rawchar "JKLMNOPQR"
 	rawchar "STUVWXYZ "
-	rawchar "/()¥<PK><MN>★♥♪"
+	rawchar "/()¥<PK><MN>★◀♪"
 	rawchar "?!♂♀.,:&%"
 	assert_table_length 9 * 5
 
@@ -33,7 +33,7 @@ MailEntry_Lowercase:
 	rawchar "klmnopqrst"
 	rawchar "uvwxyz -.,"
 	rawchar "é'd'l'm'r's't'v()"
-	rawchar "“”'%↑↓№★♥♪"
+	rawchar "“”'%↑↓№★▶♪"
 	assert_table_length 10 * 5
 
 NameInputLowerQwerty:
@@ -50,7 +50,7 @@ NameInputUpperQwerty:
 	rawchar "QWERTYUIO"
 	rawchar "ASDFGHJKL"
 	rawchar "ZXCVBNMP "
-	rawchar "/()¥<PK><MN>★♥♪"
+	rawchar "/()¥<PK><MN>★◀♪"
 	rawchar "?!♂♀.,:&%"
 	assert_table_length 9 * 5
 
@@ -69,5 +69,5 @@ MailEntryQwerty_Lowercase:
 	rawchar "asdfghjkl-"
 	rawchar "zxcvbnm,. "
 	rawchar "é'r't's'd'l'v'm()"
-	rawchar "“”'%↑↓№★♥♪"
+	rawchar "“”'%↑↓№★▶♪"
 	assert_table_length 10 * 5

@@ -634,7 +634,7 @@ PokemaniacDonaldBeatenText:
 	done
 
 CosplayerClaraSeenText:
-	text "Pix! Vul, pix! ♥"
+	text "Pix! Vul, pix!"
 	done
 
 CosplayerClaraBeatenText:

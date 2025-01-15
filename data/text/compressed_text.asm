@@ -139,7 +139,7 @@ TextCompressionHuffmanTree:
 	parent_node $67,        "2"        ; $66 - 110101001110
 	parent_node "¥",        $68        ; $67 - 1101010011100
 	parent_node $69,        $6e        ; $68 - 11010100111001
-	parent_node $6a,        "♥"        ; $69 - 110101001110010
+	parent_node $6a,        "<in>"     ; $69 - 110101001110010
 	parent_node $6b,        "<ID>"     ; $6a - 1101010011100100
 	parent_node $6c,        $6d        ; $6b - 11010100111001000
 	parent_node "<PO>",     "<KE>"     ; $6c - 110101001110010000
@@ -321,7 +321,7 @@ endr
 ;                                   ) ),
 ;                                   "<ID>"
 ;                                 ),
-;                                 "♥"
+;                                 "<in>"
 ;                               ),
 ;                               ( ( "<LV>",
 ;                                   "X"

@@ -178,7 +178,7 @@ DEF FIRST_REGULAR_TEXT_CHAR EQU $7f
 	ctxtmap "&",        $d8, 0010001111011111
 
 	ctxtmap "♪",        $d9, 00100011100010
-	ctxtmap "♥",        $da, 1101010011100101
+	ctxtmap "<in>",     $da, 1101010011100101
 
 	ctxtmap "×",        $db, 1101001100110000
 	ctxtmap "/",        $dc, 001000111101110
