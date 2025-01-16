@@ -480,12 +480,13 @@ StatsScreen_LoadGFX:
 	ld b, a
 	ld de, wTempMonExp + 2
 	farcall FillInExpBar
-	hlcoord 10, 16
-	ld a, "<XP1>"
+	hlcoord 9, 16
+	ld a, "<SOLIDBLACK>"
 	ld [hli], a
-	ld [hl], "<XP2>"
+	ld [hli], a
+	ld [hl], "<XPLEFTCAP>"
 	hlcoord 19, 16
-	ld [hl], "<XPEND>"
+	ld [hl], "<SOLIDBLACK>"
 	ret
 
 .PrintNextLevel:
@@ -625,7 +626,16 @@ StatsScreen_LoadGFX:
 	db "Moves@"
 
 .BluePage:
-	hlcoord 0, 9
+	hlcoord 0, 10
+	ld [hl], "<SOLIDBLACK>"
+	hlcoord 1, 10
+	ld [hl], "<HPLEFTCAP>"
+	hlcoord 8, 10
+	ld [hl], "<SOLIDBLACK>"
+	hlcoord 9, 10
+	ld [hl], "<SOLIDBLACK>"
+	hlcoord 2, 10
+
 	predef DrawPlayerHP
 	call .PlaceNatureInfo
 	call TN_PrintCharacteristics

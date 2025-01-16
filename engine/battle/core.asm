@@ -1915,12 +1915,12 @@ UpdateHPBarBattleHuds:
 	jmp UpdateBattleHuds
 
 UpdateHPBar:
-	hlcoord 11, 9
+	hlcoord 13, 10
 	ldh a, [hBattleTurn]
 	and a
 	ld a, 1
 	jr z, .ok
-	hlcoord 1, 2
+	hlcoord 2, 0
 	xor a
 .ok
 	push bc
@@ -3802,16 +3802,23 @@ DrawPlayerHUD:
 
 	; DrawPlayerHUDBorder
 	hlcoord 19, 11
-	ld [hl], "<XPEND>"
+	ld [hl], "<SOLIDBLACK>"
 	hlcoord 10, 11
-	ld a, "<XP1>"
+	ld a, "<BORDERLEFTDIR>"
 	ld [hli], a
-	ld [hl], "<XP2>"
+	ld [hl], "<XPLEFTCAP>"
+
+	hlcoord 19, 10
+	ld [hl], "<SOLIDBLACK>"
+	hlcoord 11, 10
+	ld a, "<BORDERLEFTDIR>"
+	ld [hli], a
+	ld [hl], "<HPLEFTCAP>"
 
 	call PrintPlayerHUD
 
 	; HP bar
-	hlcoord 11, 9
+	hlcoord 13, 10
 	xor a ; PARTYMON
 	ld [wMonType], a
 	predef DrawPlayerHP
@@ -3914,7 +3921,7 @@ endr
 	farcall CheckShininess
 	jr nc, .not_own_shiny
 	ld a, "<STAR>"
-	hlcoord 19, 8
+	hlcoord 10, 8
 	ld [hl], a
 
 .not_own_shiny
@@ -3954,6 +3961,17 @@ DrawEnemyHUD:
 
 	farcall ClearEnemyHUD
 
+	; Draw Black Border
+	hlcoord 0, 0
+	ld a, "<SOLIDBLACK>"
+	ld [hli], a
+	ld [hl], "<HPLEFTCAP>"
+	hlcoord 8, 0
+	ld a, "<SOLIDBLACK>"
+	ld [hli], a
+	ld [hli], a
+	ld [hl], "<BORDERRIGHTDIR>"
+
 	farcall DrawEnemyHUDBorder
 
 	ld a, [wTempEnemyMonSpecies]
@@ -3963,7 +3981,7 @@ DrawEnemyHUD:
 	ld [wCurForm], a
 	call GetBaseData
 	ld de, wEnemyMonNickname
-	hlcoord 1, 0
+	hlcoord 1, 2
 	rst PlaceString
 	ld h, b
 	ld l, c
@@ -3984,7 +4002,7 @@ endr
 	farcall CheckShininess
 	jr nc, .not_shiny
 	ld a, "<STAR>"
-	hlcoord 9, 1
+	hlcoord 0, 2
 	ld [hl], a
 
 .not_shiny
@@ -3998,10 +4016,10 @@ endr
 	inc a ; "<FEMALE>"
 
 .got_gender
-	hlcoord 8, 1
+	hlcoord 0, 1
 	ld [hl], a
 
-	hlcoord 5, 1
+	hlcoord 3, 1
 	ld a, [wEnemyMonLevel]
 	ld [wTempMonLevel], a
 	call PrintLevel
@@ -4067,11 +4085,11 @@ endr
 .draw_bar
 	xor a
 	ld [wWhichHPBar], a
-	hlcoord 1, 2
+	hlcoord 2, 0
 	call DrawBattleHPBar
 
 	farcall LoadEnemyStatusIcon
-	hlcoord 2, 1
+	hlcoord 8, 1
 	ld a, $57
 	ld [hli], a
 	ld [hl], $58

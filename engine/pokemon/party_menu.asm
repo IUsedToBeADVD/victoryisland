@@ -616,7 +616,7 @@ PlacePartyHPBar:
 	ret z
 	ld c, a
 	ld b, $0
-	hlcoord 11, 2
+	hlcoord 13, 2
 .loop
 	push bc
 	push hl
@@ -626,6 +626,13 @@ PlacePartyHPBar:
 	call PlacePartymonHPBar
 	pop hl
 	ld d, $6
+
+	dec hl
+	dec hl
+	ld [hl], "<SOLIDBLACK>"
+	inc hl
+	ld [hl], "<HPLEFTCAP>"
+	inc hl
 	call DrawBattleHPBar
 	ld hl, wHPPals
 	ld a, [wHPPalIndex]

@@ -197,6 +197,7 @@ HPBarAnim_UpdateHPRemaining:
 .update_hp_number
 	push hl
 	add hl, de
+	hlcoord 12, 9 ; lazy hardcoded workaround to get num tiles placed correctly
 	ld a, " "
 	ld [hli], a
 	ld [hli], a

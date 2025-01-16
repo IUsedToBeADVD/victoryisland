@@ -53,7 +53,7 @@ DrawPlayerHP:
 	pop hl
 
 ; Print HP
-	bccoord 1, 1, 0
+	bccoord -1, -1, 0
 	add hl, bc
 	ld de, wTempMonHP
 	ld a, [wMonType]

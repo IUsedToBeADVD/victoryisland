@@ -6,20 +6,17 @@ DrawBattleHPBar::
 	push de
 	push bc
 
-; Place 'HP:'
-	ld a, "<HP1>"
-	ld [hli], a
-	inc a ; ld a, "<HP2>"
-	ld [hli], a
+; Place 'HP'
+	ld [hl], "<HPLEFTCAP>"
 
 ; Draw a template
 	push hl
-	inc a ; ld a, "<NOHP>" ; empty bar
+	ld a, "<NOHP>" ; empty bar
 .template
 	ld [hli], a
 	dec d
 	jr nz, .template
-	ld [hl], "<HPEND>" ; bar end cap
+	ld [hl], "<SOLIDBLACK>" ; bar end cap
 	pop hl
 
 ; Safety check # pixels

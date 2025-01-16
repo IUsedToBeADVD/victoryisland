@@ -49,24 +49,24 @@ DEF BATTLEEXTRA_GFX_START EQU $5f
 	charmap "<STAR>",   $61
 	charmap "<BALL>",   $62
 
-	charmap "<HP1>",    $63
-	charmap "<HP2>",    $64
+	charmap "<UNUSED>",    $63
+	charmap "<HPLEFTCAP>",    $64
 	charmap "<NOHP>",   $65
 	; HP: $66 - $6c
 	charmap "<FULLHP>", $6d
-	charmap "<HPEND>",  $6e
+	charmap "<BORDERLEFTDIR>",  $6e
 
 	charmap "◢",        $6f
 	charmap "—",        $70
 	charmap "◣",        $71
 	charmap "<NONO>",   $72
 
-	charmap "<XP1>",    $73
-	charmap "<XP2>",    $74
+	charmap "<SOLIDBLACK>",    $73
+	charmap "<BORDERRIGHTDIR>",    $74
 	charmap "<NOXP>",   $75
 	; EXP: $76 - $7c
 	charmap "<FULLXP>", $7d
-	charmap "<XPEND>",  $7e
+	charmap "<XPLEFTCAP>",  $7e
 
 ; Actual characters
 
