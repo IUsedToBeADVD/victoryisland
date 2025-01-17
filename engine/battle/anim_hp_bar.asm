@@ -190,14 +190,14 @@ HPBarAnim_UpdateHPRemaining:
 	and a
 	ret z
 
-	ld de, SCREEN_WIDTH + 2
+	bccoord 0, 1, 0 ; party screen
 	dec a
 	jr nz, .update_hp_number
-	dec de
+	bccoord -1, -1, 0 ; battle
 .update_hp_number
 	push hl
-	add hl, de
-	hlcoord 12, 9 ; lazy hardcoded workaround to get num tiles placed correctly
+	add hl, bc
+	
 	ld a, " "
 	ld [hli], a
 	ld [hli], a
