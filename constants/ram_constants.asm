@@ -77,17 +77,11 @@ DEF NUM_FRAMES EQU const_value
 	const POKEDEX_UNITS  ; 5
 	const BATTLE_SWITCH  ; 6
 	const BATTLE_PREDICT ; 7
-DEF FONT_MASK EQU %00000111
+DEF FONT_MASK EQU %00000001
 
 	const_def
 	const NORMAL_FONT  ; %000
-	const NARROW_FONT  ; %001
-	const BOLD_FONT    ; %010
-	const ITALIC_FONT  ; %011
-	const SERIF_FONT   ; %100
-	const CHICAGO_FONT ; %101
-	const MICR_FONT    ; %110
-	const UNOWN_FONT   ; %111
+	const UNOWN_FONT   ; %001
 DEF NUM_FONTS EQU const_value
 
 ; wInitialOptions::

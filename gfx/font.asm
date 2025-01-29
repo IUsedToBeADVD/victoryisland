@@ -2,18 +2,6 @@ FontTiles::
 	table_width 114 * LEN_1BPP_TILE
 FontNormal:
 INCBIN "gfx/font/normal.1bpp"
-FontNarrow:
-INCBIN "gfx/font/narrow.1bpp"
-FontBold:
-INCBIN "gfx/font/bold.1bpp"
-FontItalic:
-INCBIN "gfx/font/italic.1bpp"
-FontSerif:
-INCBIN "gfx/font/serif.1bpp"
-FontMICR:
-INCBIN "gfx/font/micr.1bpp"
-FontChicago:
-INCBIN "gfx/font/chicago.1bpp"
 FontUnown:
 INCBIN "gfx/font/unown.1bpp"
 	assert_table_length NUM_FONTS

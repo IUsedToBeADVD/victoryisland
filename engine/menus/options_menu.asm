@@ -75,12 +75,12 @@ StringOptions1:
 	next1 "        :"
 	next1 "Frame"
 	next1 "        :Type"
-	next1 "Typeface"
-	next1 "        :"
 	next1 "Keyboard"
 	next1 "        :"
 	next1 "Sound"
 	next1 "        :"
+	next1
+	next1
 	next1 "Next"
 	next1 "        " ; no-optimize trailing string space
 	next1 "Done"
@@ -117,9 +117,9 @@ GetOptionPointer:
 	dw Options_TextSpeed
 	dw Options_TextAutoscroll
 	dw Options_Frame
-	dw Options_Typeface
 	dw Options_Keyboard
 	dw Options_Sound
+	dw Options_Typeface
 	dw Options_Next
 	dw Options_Done
 
@@ -346,7 +346,7 @@ Options_Sound:
 	set STEREO, [hl]
 	ld de, .Stereo
 .Display:
-	hlcoord 11, 13
+	hlcoord 11, 11
 	rst PlaceString
 	and a
 	ret
@@ -499,6 +499,8 @@ Options_TurningSpeed:
 	db "Fast@"
 
 Options_Typeface:
+	ret ; disabled. as of now, no plans of having unown in the game
+
 	ld hl, wOptions2
 	ld a, [hl]
 	and FONT_MASK
@@ -556,28 +558,10 @@ Options_Typeface:
 
 .Strings:
 	dw .Normal
-	dw .Narrow
-	dw .Bold
-	dw .Italic
-	dw .Serif
-	dw .Chicago
-	dw .MICR
 	dw .Unown
 
 .Normal:
 	db "Normal @"
-.Narrow:
-	db "Narrow @"
-.Bold:
-	db "Bold   @"
-.Italic:
-	db "Italic @"
-.Serif:
-	db "Serif  @"
-.Chicago:
-	db "Chicago@"
-.MICR:
-	db "MICR   @"
 .Unown:
 	db "Unown  @"
 
@@ -600,7 +584,7 @@ Options_Keyboard:
 	set QWERTY_KEYBOARD_F, [hl]
 	ld de, .QWERTY
 .Display:
-	hlcoord 11, 11
+	hlcoord 11, 9
 	rst PlaceString
 	and a
 	ret
