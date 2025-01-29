@@ -369,8 +369,14 @@ Phone_CallerTextboxWithName:
 Phone_TextboxWithName:
 	push bc
 	call Phone_CallerTextbox
+
+	ld hl, BattleExtrasGFX
+	ld de, vTiles0 tile $ec
+	lb bc, BANK(BattleExtrasGFX), 6
+	call DecompressRequest2bpp
+
 	hlcoord 1, 1
-	ld a, "<PHONE>"
+	ld a, "<tt>" ; <PHONE>
 	ld [hli], a
 	inc hl
 	ld d, h

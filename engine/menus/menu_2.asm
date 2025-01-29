@@ -36,7 +36,19 @@ PlaceMenuKeyItemName:
 	pop bc
 	dec a
 	jr nz, .not_unique
-	ld c, "★"
+
+	push hl
+	push de
+	push bc
+	ld hl, BattleExtrasGFX
+	ld de, vTiles2 tile $41
+	lb bc, BANK(BattleExtrasGFX), 5
+	call DecompressRequest2bpp
+	pop hl
+	pop de
+	pop bc
+
+	ld c, $45 ; "★"
 .not_unique
 	ld a, c
 	ld [de], a

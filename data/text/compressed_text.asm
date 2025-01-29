@@ -18,8 +18,8 @@ MACRO _parent_node
 			fail "already mapped leaf node character \1"
 		endc
 		DEF ___huffman_leaf_node_{02X:x} = 1
-		if $7f <= \1 && \1 <= $eb
-			; characters $7f-$eb correspond to leaf nodes $7f-$eb
+		if $7f <= \1 && \1 <= $f1
+			; characters $7f-$f1 correspond to leaf nodes $7f-$f1
 			db \1
 		elif $4d <= \1 && \1 <= $5c
 			; characters $4d-$5c correspond to leaf nodes $ec-$fb
@@ -99,7 +99,7 @@ TextCompressionHuffmanTree:
 	parent_node $3f,        "k"        ; $3e - 101100
 	parent_node $40,        $42        ; $3f - 1011000
 	parent_node "O",        $41        ; $40 - 10110000
-	parent_node "'r",       "x"        ; $41 - 101100001
+	parent_node "<il>",     "x"        ; $41 - 101100001
 	parent_node "M",        $43        ; $42 - 10110001
 	parent_node $44,        "F"        ; $43 - 101100011
 	parent_node "#",        "'v"       ; $44 - 1011000110
@@ -158,7 +158,9 @@ TextCompressionHuffmanTree:
 	parent_node "W",        $7a        ; $79 - 11110101
 	parent_node "'m",       $7b        ; $7a - 111101011
 	parent_node "K",        "N"        ; $7b - 1111010111
-	; parent nodes $7c-$7e are unused
+	parent_node "<Ir>",     "<li>"     ; $7c - 11110101110
+	parent_node "<ir>",     "<rc>"     ; $7d - 111101011101
+	parent_node "<lu>",     "<tt>"     ; $7e - 1111010111101
 
 for x, 256
 	if DEF(___huffman_data_{02X:x}) && !DEF(___huffman_leaf_node_{02X:x})
@@ -256,7 +258,7 @@ endr
 ;       ),
 ;       ( "o",
 ;         ( ( ( ( ( "O",
-;                   ( "'r",
+;                   ( "<il>",
 ;                     "x"
 ;                 ) ),
 ;                 ( "M",

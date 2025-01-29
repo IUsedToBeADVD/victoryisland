@@ -40,7 +40,7 @@ _UpdateKeyItemIcon:
 LoadApricornIconForOverworld:
 	ld hl, ApricornIcon
 	lb bc, BANK(ApricornIcon), 9
-	ld de, vTiles0 tile "▲"
+	ld de, vTiles0 tile "<Ir>"
 	jmp DecompressRequest2bpp
 
 LoadItemIconForOverworld::
@@ -52,7 +52,7 @@ DecompressItemIconForOverworld::
 	call FarDecompressWRA6InB
 	call WhiteOutDecompressedItemIconCorners
 	pop bc
-	ld hl, vTiles0 tile "▲"
+	ld hl, vTiles0 tile "<Ir>"
 	ld de, wDecompressScratch
 	jmp Request2bppInWRA6
 
@@ -150,7 +150,7 @@ ShowTMHMIcon::
 	; fallthrough
 PrintOverworldItemIcon:
 	call SetDefaultBGPAndOBP
-	ld a, "▲"
+	ld a, "<Ir>"
 	hlcoord 16, 13
 	ld [hli], a
 	inc a

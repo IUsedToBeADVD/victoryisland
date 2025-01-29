@@ -1084,7 +1084,7 @@ Pokedex_GetFirstIconTile:
 
 PokedexStr_Feet:
 ; Feet uses its own pelicular display format, so replace the ?s too.
-	db "′??″@"
+	db "'??”@"
 
 Pokedex_SetDispModeUnlessNewMon:
 	ld a, [wPokedex_DisplayMode]

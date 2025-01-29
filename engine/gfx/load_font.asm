@@ -21,7 +21,7 @@ _LoadStandardMaybeOpaqueFont:
 	push af
 	call GetMaybeOpaque1bpp
 	ld de, FontCommon
-	ld hl, vTiles0 tile "↑"
+	ld hl, vTiles0 tile "◀"
 	lb bc, BANK(FontCommon), 6
 	pop af
 	ldh [hRequestOpaque1bpp], a

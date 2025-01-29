@@ -1,10 +1,11 @@
 DEF NAMINGSCREEN_BORDER EQU $60
 DEF NAMINGSCREEN_MALE EQU $6b
 DEF NAMINGSCREEN_FEMALE EQU $6c
+DEF NAMINGSCREEN_STAR EQU $6f
 DEF NAMINGSCREEN_CURSOR EQU $7e
 
-DEF NAMINGSCREEN_MIDDLELINE EQU "′"
-DEF NAMINGSCREEN_UNDERLINE  EQU "″"
+DEF NAMINGSCREEN_MIDDLELINE EQU "◀"
+DEF NAMINGSCREEN_UNDERLINE  EQU "▶"
 
 _NamingScreen:
 	call DisableSpriteUpdates
@@ -90,7 +91,7 @@ NamingScreen:
 	farcall GetShininess
 	jr z, .not_shiny
 	hlcoord 1, 4
-	ld [hl], "★"
+	ld [hl], NAMINGSCREEN_STAR ; "★"
 .not_shiny
 	jmp .StoreMonIconParams
 
@@ -756,7 +757,7 @@ LoadNamingScreenGFX:
 	; Gender symbols
 	ld hl, BattleExtrasGFX
 	ld de, vTiles2 tile NAMINGSCREEN_MALE
-	lb bc, BANK(BattleExtrasGFX), 2
+	lb bc, BANK(BattleExtrasGFX), 5
 	call DecompressRequest2bpp
 
 	ld de, vTiles0 tile NAMINGSCREEN_CURSOR

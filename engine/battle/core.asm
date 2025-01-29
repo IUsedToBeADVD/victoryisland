@@ -3802,14 +3802,14 @@ DrawPlayerHUD:
 
 	; DrawPlayerHUDBorder
 	hlcoord 19, 11
-	ld [hl], "<SOLIDBLACK>"
+	ld [hl], "<BLACK>"
 	hlcoord 10, 11
 	ld a, "<BORDERLEFTDIR>"
 	ld [hli], a
 	ld [hl], "<XPLEFTCAP>"
 
 	hlcoord 19, 10
-	ld [hl], "<SOLIDBLACK>"
+	ld [hl], "<BLACK>"
 	hlcoord 11, 10
 	ld a, "<BORDERLEFTDIR>"
 	ld [hli], a
@@ -3963,11 +3963,11 @@ DrawEnemyHUD:
 
 	; Draw Black Border
 	hlcoord 0, 0
-	ld a, "<SOLIDBLACK>"
+	ld a, "<BLACK>"
 	ld [hli], a
 	ld [hl], "<HPLEFTCAP>"
 	hlcoord 8, 0
-	ld a, "<SOLIDBLACK>"
+	ld a, "<BLACK>"
 	ld [hli], a
 	ld [hli], a
 	ld [hl], "<BORDERRIGHTDIR>"

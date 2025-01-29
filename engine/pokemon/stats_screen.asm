@@ -481,12 +481,12 @@ StatsScreen_LoadGFX:
 	ld de, wTempMonExp + 2
 	farcall FillInExpBar
 	hlcoord 9, 16
-	ld a, "<SOLIDBLACK>"
+	ld a, "<BLACK>"
 	ld [hli], a
 	ld [hli], a
 	ld [hl], "<XPLEFTCAP>"
 	hlcoord 19, 16
-	ld [hl], "<SOLIDBLACK>"
+	ld [hl], "<BLACK>"
 	ret
 
 .PrintNextLevel:
@@ -627,13 +627,13 @@ StatsScreen_LoadGFX:
 
 .BluePage:
 	hlcoord 0, 10
-	ld [hl], "<SOLIDBLACK>"
+	ld [hl], "<BLACK>"
 	hlcoord 1, 10
 	ld [hl], "<HPLEFTCAP>"
 	hlcoord 8, 10
-	ld [hl], "<SOLIDBLACK>"
+	ld [hl], "<BLACK>"
 	hlcoord 9, 10
-	ld [hl], "<SOLIDBLACK>"
+	ld [hl], "<BLACK>"
 	hlcoord 2, 10
 
 	predef DrawPlayerHP

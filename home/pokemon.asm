@@ -16,7 +16,7 @@ DrawBattleHPBar::
 	ld [hli], a
 	dec d
 	jr nz, .template
-	ld [hl], "<SOLIDBLACK>" ; bar end cap
+	ld [hl], "<BLACK>" ; bar end cap
 	pop hl
 
 ; Safety check # pixels

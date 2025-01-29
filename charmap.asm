@@ -49,8 +49,8 @@ DEF BATTLEEXTRA_GFX_START EQU $5f
 	charmap "<STAR>",   $61
 	charmap "<BALL>",   $62
 
-	charmap "<UNUSED>",    $63
-	charmap "<HPLEFTCAP>",    $64
+	charmap "★",    $63
+	charmap "<PHONE>",    $64
 	charmap "<NOHP>",   $65
 	; HP: $66 - $6c
 	charmap "<FULLHP>", $6d
@@ -61,7 +61,7 @@ DEF BATTLEEXTRA_GFX_START EQU $5f
 	charmap "◣",        $71
 	charmap "<NONO>",   $72
 
-	charmap "<SOLIDBLACK>",    $73
+	charmap "<HPLEFTCAP>",    $73
 	charmap "<BORDERRIGHTDIR>",    $74
 	charmap "<NOXP>",   $75
 	; EXP: $76 - $7c
@@ -148,9 +148,9 @@ DEF FIRST_REGULAR_TEXT_CHAR EQU $7f
 
 	ctxtmap "'",        $c0, 0010001110000
 	ctxtmap "'d",       $c1, 010110111100
-	ctxtmap "'l",       $c2, 0101101101
+	ctxtmap "'l",       $c2, 0101101101 ; good candidate for replacement
 	ctxtmap "'m",       $c3, 1111010110
-	ctxtmap "'r",       $c4, 1011000010
+	ctxtmap "<il>",     $c4, 1011000010
 	ctxtmap "'s",       $c5, 00111011
 	ctxtmap "'t",       $c6, 110100000
 	ctxtmap "'v",       $c7, 10110001101
@@ -173,11 +173,11 @@ DEF FIRST_REGULAR_TEXT_CHAR EQU $7f
 	ctxtmap "<ID>",     $d4, 11010100111001001
 	ctxtmap "№",        $d5, 0010001111011000
 	ctxtmap "<LV>",     $d6, 11010100111001100
-	ctxtmap "<BOLDP>",  $d7, 00100011110111100
+	ctxtmap "<BOLDP>",  $d7, 00100011110111100 ; candidate for replacement
 
 	ctxtmap "&",        $d8, 0010001111011111
 
-	ctxtmap "♪",        $d9, 00100011100010
+	ctxtmap "♪",        $d9, 00100011100010 ; candidate for replacement
 	ctxtmap "<in>",     $da, 1101010011100101
 
 	ctxtmap "×",        $db, 1101001100110000
@@ -185,7 +185,7 @@ DEF FIRST_REGULAR_TEXT_CHAR EQU $7f
 	ctxtmap "%",        $dd, 1101010011100100010
 
 	ctxtmap "+",        $de, 1101010011100100011
-	ctxtmap "<SHARP>",  $df, 001000111101111010
+	ctxtmap "<SHARP>",  $df, 001000111101111010 ; candidate for replacement
 
 	ctxtmap "0",        $e0, 110101001111
 	ctxtmap "1",        $e1, 001000111001
@@ -202,21 +202,20 @@ DEF FIRST_REGULAR_TEXT_CHAR EQU $7f
 
 	ctxtmap "…",        $eb, 11010001
 
-	charmap "★",        $ec
+	ctxtmap "<Ir>",     $ec, 111101011100
+	ctxtmap "<li>",     $ed, 111101011101
+	ctxtmap "<ir>",     $ee, 1111010111010
+	ctxtmap "<rc>",     $ef, 1111010111011
+	ctxtmap "<lu>",     $f0, 11110101111010
+	ctxtmap "<tt>",     $f1, 11110101111011
 
-	charmap "▼",        $ed
-	charmap "▲",        $ee
-	charmap "◀",        $ef
-	charmap "▶",        $f0
-	charmap "▷",        $f1
-
-; common font:
-	charmap "↑",        $f2
-	charmap "↓",        $f3
-	charmap "′",        $f4
-	charmap "″",        $f5
-	charmap "<PHONE>",  $f6
-	charmap "<BLACK>",  $f7
+; common:
+	charmap "◀",        $f2
+	charmap "▶",        $f3
+	charmap "▷",        $f4
+	charmap "▼",        $f5
+	charmap "▲",        $f6
+	charmap "<BLACK>",   $f7
 
 ; frame:
 	charmap "┌",        $f8

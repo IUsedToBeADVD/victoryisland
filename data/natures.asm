@@ -88,23 +88,23 @@ NatureIndicators:
 .SassyInd:   db "<NEXT>" ; fallthrough
 .RashInd:    db "<NEXT>" ; fallthrough
 .ImpishInd:  db "<NEXT>" ; fallthrough
-.LonelyInd:  db "↑<NEXT>↓@"
+.LonelyInd:  db "▲<NEXT>▼@"
 .NaiveInd:   db "<NEXT>" ; fallthrough
 .CarefulInd: db "<NEXT>" ; fallthrough
 .MildInd:    db "<NEXT>" ; fallthrough
-.BoldInd:    db "↓<NEXT>↑@"
+.BoldInd:    db "▼<NEXT>▲@"
 .QuietInd:   db "<NEXT>" ; fallthrough
 .LaxInd:     db "<NEXT>" ; fallthrough
-.AdamantInd: db "↑<NEXT><NEXT>↓@"
+.AdamantInd: db "▲<NEXT><NEXT>▼@"
 .JollyInd:   db "<NEXT>" ; fallthrough
 .GentleInd:  db "<NEXT>" ; fallthrough
-.ModestInd:  db "↓<NEXT><NEXT>↑@"
+.ModestInd:  db "▼<NEXT><NEXT>▲@"
 .RelaxedInd: db "<NEXT>" ; fallthrough
-.NaughtyInd: db "↑<NEXT><NEXT><NEXT>↓@"
+.NaughtyInd: db "▲<NEXT><NEXT><NEXT>▼@"
 .HastyInd:   db "<NEXT>" ; fallthrough
-.CalmInd:    db "↓<NEXT><NEXT><NEXT>↑@"
-.BraveInd:   db "↑<NEXT><NEXT><NEXT><NEXT>↓@"
-.TimidInd:   db "↓<NEXT><NEXT><NEXT><NEXT>↑" ; fallthrough
+.CalmInd:    db "▼<NEXT><NEXT><NEXT>▲@"
+.BraveInd:   db "▲<NEXT><NEXT><NEXT><NEXT>▼@"
+.TimidInd:   db "▼<NEXT><NEXT><NEXT><NEXT>▲" ; fallthrough
 .HardyInd:
 .DocileInd:
 .SeriousInd:

@@ -162,12 +162,12 @@ PrintMagikarpLength:
 	ld de, wMagikarpLengthMmHi
 	lb bc, PRINTNUM_LEFTALIGN | 1, 2
 	call PrintNum
-	ld a, "′"
+	ld a, "'"
 	ld [hli], a
 	ld de, wMagikarpLengthMmLo
 	lb bc, PRINTNUM_LEFTALIGN | 1, 2
 	call PrintNum
-	ld a, "″"
+	ld a, "”"
 	ld [hli], a
 	ld [hl], "@"
 	ret

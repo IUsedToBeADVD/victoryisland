@@ -629,7 +629,7 @@ PlacePartyHPBar:
 
 	dec hl
 	dec hl
-	ld [hl], "<SOLIDBLACK>"
+	ld [hl], "<BLACK>"
 	inc hl
 	ld [hl], "<HPLEFTCAP>"
 	inc hl
