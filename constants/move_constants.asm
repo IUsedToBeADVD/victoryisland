@@ -20,7 +20,7 @@
 	const NIGHT_SLASH   ; $0c
 	const AIR_SLASH     ; $0d
 	const SWORDS_DANCE  ; $0e
-	const CUT           ; $0f
+	const CUT           ; $0f ; potential to replace
 	const GUST          ; $10
 	const WING_ATTACK   ; $11
 	const SUCKER_PUNCH  ; $12
@@ -75,9 +75,9 @@
 	const LOW_KICK      ; $43
 	const COUNTER       ; $44
 	const SEISMIC_TOSS  ; $45
-	const STRENGTH      ; $46
+	const STRENGTH      ; $46 ; potential to replace
 	const ABSORB        ; $47
-	const MEGA_DRAIN    ; $48
+	const MEGA_DRAIN    ; $48 ; potential to replace
 	const LEECH_SEED    ; $49
 	const GROWTH        ; $4a
 	const RAZOR_LEAF    ; $4b
@@ -124,7 +124,7 @@
 	const FOCUS_ENERGY  ; $74
 	const FLASH_CANNON  ; $75
 	const METRONOME     ; $76
-	const SCALD         ; $77
+	const SCALD         ; $77 ; potential to replace
 	const TRICK_ROOM    ; $78
 	const SKILL_SWAP    ; $79
 	const LICK          ; $7a
@@ -160,7 +160,7 @@
 	const CRABHAMMER    ; $98
 	const EXPLOSION     ; $99
 	const FURY_STRIKES  ; $9a
-	const BONEMERANG    ; $9b
+	const BONEMERANG    ; $9b ; potential to replace
 	const REST          ; $9c
 	const ROCK_SLIDE    ; $9d
 	const HYPER_FANG    ; $9e
@@ -171,7 +171,7 @@
 	const SLASH         ; $a3
 	const SUBSTITUTE    ; $a4
 	const GIGA_IMPACT   ; $a5
-	const SKETCH        ; $a6
+	const SKETCH        ; $a6 ; potential to replace
 	const DRAIN_PUNCH   ; $a7
 	const THIEF         ; $a8
 	const WILL_O_WISP   ; $a9
@@ -192,7 +192,7 @@
 	const SCARY_FACE    ; $b8
 	const FEINT_ATTACK  ; $b9
 	const SWEET_KISS    ; $ba
-	const BELLY_DRUM    ; $bb
+	const BELLY_DRUM    ; $bb ; potential to replace
 	const SLUDGE_BOMB   ; $bc
 	const MUD_SLAP      ; $bd
 	const OCTAZOOKA     ; $be
@@ -226,7 +226,7 @@
 	const BUG_BUZZ      ; $da
 	const SAFEGUARD     ; $db
 	const PAIN_SPLIT    ; $dc
-	const SACRED_FIRE   ; $dd
+	const SACRED_FIRE   ; $dd ; potential to replace
 	const MAGNITUDE     ; $de
 	const DYNAMICPUNCH  ; $df
 	const MEGAHORN      ; $e0
@@ -250,7 +250,7 @@
 	const CRUNCH        ; $f2
 	const MIRROR_COAT   ; $f3
 	const NASTY_PLOT    ; $f4
-	const EXTREMESPEED  ; $f5
+	const EXTREMESPEED  ; $f5 ; potential to replace
 	const ANCIENTPOWER  ; $f6
 	const SHADOW_BALL   ; $f7
 	const FUTURE_SIGHT  ; $f8
