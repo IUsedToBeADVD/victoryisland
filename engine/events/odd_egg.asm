@@ -78,20 +78,20 @@ endr
 	ld [hli], a
 	ld [hli], a
 	ld [hl], a
-	farcall SetTempPartyMonData
+	call SetTempPartyMonData
 	farcall AddTempMonToParty
 	jr c, .box
 	ld a, 1
 	jr .done
 
 .box
-	farcall NewStorageBoxPointer
+	call NewStorageBoxPointer
 	jr c, .failed
 	ld a, c
 	ld [wTempMonSlot], a
 	ld a, b
 	ld [wTempMonBox], a
-	farcall UpdateStorageBoxMonFromTemp
+	call UpdateStorageBoxMonFromTemp
 	ld a, 2
 	jr .done
 

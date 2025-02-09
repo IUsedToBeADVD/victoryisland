@@ -417,14 +417,14 @@ _ChooseWildEncounter:
 	ld [wTempWildMonSpecies], a
 	call IsAPokemon
 	jr c, .nowildbattle
-
+; TODO : specify maps with ghost encounters here
 	ld a, [wMapGroup]
-	cp GROUP_SOUL_HOUSE_B1F ; Soul House or Lavender Radio Tower
+	cp GROUP_NONE ;SOUL_HOUSE_B1F ; Soul House or Lavender Radio Tower
 	jr nz, .not_ghost
 	ld a, [wMapNumber]
-	cp MAP_SOUL_HOUSE_B1F ; first Ghost map in its group
+	cp MAP_NONE ;SOUL_HOUSE_B1F ; first Ghost map in its group
 	jr c, .not_ghost
-	cp MAP_ROUTE_16_WEST ; non-ghost map in soul house group
+	cp MAP_NONE ;ROUTE_16_WEST ; non-ghost map in soul house group
 	jr z, .not_ghost
 	ld a, SILPHSCOPE2
 	ld [wCurKeyItem], a
@@ -701,15 +701,17 @@ InitRoamMons:
 	ld [wRoamMon2Level], a
 
 ; raikou starting map
-	ld a, GROUP_ROUTE_42
+; TODO: Replace GROUP_NONE and MAP_NONE with the starting map for Raikou to roam.
+	ld a, GROUP_NONE ; ROUTE_42
 	ld [wRoamMon1MapGroup], a
-	ld a, MAP_ROUTE_42
+	ld a, MAP_NONE ; ROUTE_42
 	ld [wRoamMon1MapNumber], a
 
 ; entei starting map
-	ld a, GROUP_ROUTE_37
+; TODO: Replace GROUP_NONE and MAP_NONE with the starting map for Entei to roam.
+	ld a, GROUP_NONE ; ROUTE_37
 	ld [wRoamMon2MapGroup], a
-	ld a, MAP_ROUTE_37
+	ld a, MAP_NONE ; ROUTE_37
 	ld [wRoamMon2MapNumber], a
 
 ; hp

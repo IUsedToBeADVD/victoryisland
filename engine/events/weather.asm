@@ -54,13 +54,14 @@ SetCurrentWeather::
 	ret
 
 .not_overcast
+; TODO : specify weather maps
 	ld a, [wMapGroup]
-	cp GROUP_SNOWTOP_MOUNTAIN_OUTSIDE
+	cp GROUP_NONE ;SNOWTOP_MOUNTAIN_OUTSIDE
 	jr nz, .not_snowing
 	ld a, [wMapNumber]
-	cp MAP_SNOWTOP_MOUNTAIN_OUTSIDE
+	cp MAP_NONE ;SNOWTOP_MOUNTAIN_OUTSIDE
 	jr z, .snowing
-	cp MAP_SNOWTOP_MOUNTAIN_INSIDE
+	cp MAP_NONE ;SNOWTOP_MOUNTAIN_INSIDE
 	jr nz, .not_snowing
 .snowing
 	ld a, OW_WEATHER_SNOW
@@ -68,12 +69,12 @@ SetCurrentWeather::
 
 .not_snowing
 	ld a, [wMapGroup]
-	cp GROUP_RUGGED_ROAD_NORTH
+	cp GROUP_NONE ;RUGGED_ROAD_NORTH
 	jr nz, .no_weather
 	ld a, [wMapNumber]
-	cp MAP_RUGGED_ROAD_NORTH
+	cp MAP_NONE ;RUGGED_ROAD_NORTH
 	jr z, .sandstorm
-	cp MAP_RUGGED_ROAD_SOUTH
+	cp MAP_NONE ;RUGGED_ROAD_SOUTH
 	jr nz, .no_weather
 .sandstorm
 	ld a, OW_WEATHER_SANDSTORM

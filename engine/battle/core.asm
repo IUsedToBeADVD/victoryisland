@@ -6158,11 +6158,12 @@ CheckValidMagikarpLength:
 	jr nc, .redo
 
 .CheckMagikarpArea:
+	; TODO: Replace GROUP_NONE and MAP_NONE with the map you want for large Magikarp.
 	ld a, [wMapGroup]
-	cp GROUP_LAKE_OF_RAGE
+	cp GROUP_NONE
 	jr nz, .okay
 	ld a, [wMapNumber]
-	cp MAP_LAKE_OF_RAGE
+	cp MAP_NONE
 	jr nz, .okay
 .LakeOfRageMagikarp
 	; 40% chance of not flooring
@@ -8775,18 +8776,18 @@ AutomaticBattleWeather:
 	ld a, [wInBattleTowerBattle]
 	and a
 	ret nz
-
+;TODO : specify maps with automatic weather here
 	ld a, [wMapGroup]
-	cp GROUP_SNOWTOP_MOUNTAIN_INSIDE ; aka GROUP_RUGGED_ROAD_SOUTH
+	cp GROUP_NONE ;SNOWTOP_MOUNTAIN_INSIDE ; aka GROUP_RUGGED_ROAD_SOUTH
 	jr nz, .not_rugged_road_or_snowtop_mountain
 	ld a, [wMapNumber]
 	; Automatic hail on Snowtop Mountain
-	cp MAP_SNOWTOP_MOUNTAIN_INSIDE
+	cp MAP_NONE ;SNOWTOP_MOUNTAIN_INSIDE
 	lb de, WEATHER_HAIL, HAIL
 	ld hl, HailStartedText
 	jr z, .got_weather
 	; Automatic sandstorm on Rugged Road
-	cp MAP_RUGGED_ROAD_SOUTH
+	cp MAP_NONE ;RUGGED_ROAD_SOUTH
 	lb de, WEATHER_SANDSTORM, SANDSTORM
 	ld hl, SandstormBrewedText
 	jr z, .got_weather

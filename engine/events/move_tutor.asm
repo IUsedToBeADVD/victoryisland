@@ -115,3 +115,12 @@ CheckCanLearnMoveTutorMove:
 .MenuDataHeader:
 	db MENU_BACKUP_TILES
 	menu_coords 0, 12, 19, 17
+
+; TODO : move this text to common or the map that has the move tutor
+MoveReminderNoMovesText::
+	text "Sorry… There isn't"
+	line "any move I can"
+
+	para "make that #mon"
+	line "remember."
+	prompt

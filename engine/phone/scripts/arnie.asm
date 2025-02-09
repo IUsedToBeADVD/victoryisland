@@ -53,7 +53,8 @@ ArnieYanmaSwarm: ; start swarm
 	iftruefwd ArnieYanmaAlreadySwarming
 	setflag ENGINE_YANMA_SWARM
 	getmonname YANMA, $1
-	swarm SWARM_YANMA, ROUTE_35
+; TODO: Pick a map for the Yanma swarm, and add its wild data to the appropriate data/wild/ file.
+;	swarm SWARM_YANMA, NONE
 	getlandmarkname ROUTE_35, $2
 	farsjump ArnieSwarmScript
 

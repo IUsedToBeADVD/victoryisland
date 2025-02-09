@@ -5,7 +5,6 @@ PokeCenter2F_MapScriptHeader:
 	scene_script PokeCenter2FLeftColosseumTrigger
 
 	def_callbacks
-	callback MAPCALLBACK_TILES, PokeCenter2FTileCallback
 
 	def_warp_events
 	warp_event  0,  7, POKECENTER_2F, -1
@@ -34,23 +33,6 @@ PokeCenter2FDummyTrigger:
 PokeCenter2FLeftColosseumTrigger:
 	sdefer Script_LeftCableColosseum
 	end
-
-PokeCenter2FTileCallback:
-	callasm .CheckKanto
-	iffalsefwd .done
-	changemapblocks KantoPokeCenter2F_BlockData
-.done
-	endcallback
-
-.CheckKanto:
-	call RegionCheck
-	dec e ; KANTO_REGION?
-	ld a, TRUE
-	jr z, .ok
-	dec a ; FALSE
-.ok
-	ldh [hScriptVar], a
-	ret
 
 Script_LeftCableTradeCenter:
 	special WaitForOtherPlayerToExit

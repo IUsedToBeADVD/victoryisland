@@ -851,7 +851,7 @@ CheckMenuOW:
 
 	ld a, [wPanningAroundTinyMap]
 	and a
-	jr nz, .PanningAroundSnowtopMountain
+	;jr nz, .PanningAroundSnowtopMountain
 
 	ldh a, [hJoyPressed]
 	bit SELECT_F, a
@@ -876,15 +876,15 @@ CheckMenuOW:
 	scf
 	ret
 
-.PanningAroundSnowtopMountain:
-	ldh a, [hJoyPressed]
-	and B_BUTTON
-	ret z
-	ld a, BANK(SnowtopMountainOutsideStopPanningScript)
-	ld hl, SnowtopMountainOutsideStopPanningScript
-	call CallScript
-	scf
-	ret
+;.PanningAroundSnowtopMountain:
+;	ldh a, [hJoyPressed]
+;	and B_BUTTON
+;	ret z
+;	ld a, BANK(SnowtopMountainOutsideStopPanningScript)
+;	ld hl, SnowtopMountainOutsideStopPanningScript
+;	call CallScript
+;	scf
+;	ret
 
 StartMenuScript:
 	callasm StartMenu
@@ -1325,7 +1325,7 @@ GetContestLocations:
 	scf
 	ret
 .found_mon
-	lb de, GROUP_NATIONAL_PARK, MAP_NATIONAL_PARK
+	lb de, GROUP_NEW_BARK_TOWN, MAP_NEW_BARK_TOWN
 	xor a ; ld a, JOHTO_REGION
 	farjp Pokedex_SetWildLandmark
 

@@ -1,11 +1,12 @@
 GetOvercastIndex::
+; TODO : define overcast maps
 ; Some maps are overcast, depending on certain conditions
 	ld a, [wMapGroup]
-	cp GROUP_AZALEA_TOWN ; GROUP_ROUTE_33
+	cp GROUP_NONE ;AZALEA_TOWN ; GROUP_ROUTE_33
 	jr z, .azalea_route_33
-	cp GROUP_LAKE_OF_RAGE ; GROUP_ROUTE_43
+	cp GROUP_NONE ;LAKE_OF_RAGE ; GROUP_ROUTE_43
 	jr z, .lake_of_rage_route_43
-	cp GROUP_STORMY_BEACH ; GROUP_GOLDENROD_CITY, GROUP_MAGNET_TUNNEL_WEST, GROUP_ROUTE_34, GROUP_ROUTE_34_COAST
+	cp GROUP_NONE ;STORMY_BEACH ; GROUP_GOLDENROD_CITY, GROUP_MAGNET_TUNNEL_WEST, GROUP_ROUTE_34, GROUP_ROUTE_34_COAST
 	jr z, .stormy_beach_goldenrod_city_route_34
 .not_overcast:
 	xor a ; NOT_OVERCAST
@@ -14,9 +15,9 @@ GetOvercastIndex::
 .azalea_route_33:
 ; Azalea Town and Route 33
 	ld a, [wMapNumber]
-	cp MAP_AZALEA_TOWN
+	cp MAP_NONE ;AZALEA_TOWN
 	jr z, .azalea_town
-	cp MAP_ROUTE_33
+	cp MAP_NONE ;ROUTE_33
 	jr nz, .not_overcast
 .azalea_town
 ; Not overcast until Slowpokes appear (Team Rocket beaten)
@@ -36,9 +37,9 @@ GetOvercastIndex::
 .lake_of_rage_route_43:
 ; Lake of Rage and Route 43
 	ld a, [wMapNumber]
-	cp MAP_LAKE_OF_RAGE
+	cp MAP_NONE ;LAKE_OF_RAGE
 	jr z, .lake_of_rage
-	cp MAP_ROUTE_43
+	cp MAP_NONE ;ROUTE_43
 	jr nz, .not_overcast
 .lake_of_rage
 ; Always overcast until civilians appear (Team Rocket beaten)
@@ -60,15 +61,15 @@ GetOvercastIndex::
 ; Stormy Beach, Goldenrod City, Magnet Tunnel West, Route 34, Route 34 Coast
 	ld a, [wMapNumber]
 ; Stormy Beach is always overcast
-	cp MAP_STORMY_BEACH
+	cp MAP_NONE ;STORMY_BEACH
 	jr z, .overcast_stormy_beach
-	cp MAP_ROUTE_34_COAST
+	cp MAP_NONE ;ROUTE_34_COAST
 	jr z, .maybe_stormy_beach
-	cp MAP_ROUTE_34
+	cp MAP_NONE ;ROUTE_34
 	jr z, .maybe_stormy_beach
-	cp MAP_MAGNET_TUNNEL_WEST
+	cp MAP_NONE ;MAGNET_TUNNEL_WEST
 	jr z, .maybe_stormy_beach
-	cp MAP_GOLDENROD_CITY
+	cp MAP_NONE ;GOLDENROD_CITY
 	jr nz, .not_overcast
 .maybe_stormy_beach
 ; Only overcast while Team Rocket is present

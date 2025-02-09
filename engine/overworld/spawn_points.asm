@@ -22,7 +22,7 @@ EnterMapSpawnPoint:
 	ld [wYCoord], a
 	ld a, [wDefaultSpawnpoint]
 	; don't spawn on top of Archer
-	cp SPAWN_YELLOW_FOREST
+	cp SPAWN_N_A ;YELLOW_FOREST
 	jr nz, .not_yellow_forest
 	eventflagcheck EVENT_CLEARED_YELLOW_FOREST
 	jr nz, .done
@@ -31,7 +31,7 @@ EnterMapSpawnPoint:
 	jr .done
 .not_yellow_forest
 	; don't spawn within the area of Misty's date
-	cp SPAWN_CERULEAN_CAPE
+	cp SPAWN_N_A ;CERULEAN_CAPE
 	jr nz, .done
 	eventflagcheck EVENT_CERULEAN_CAPE_BOYFRIEND
 	jr nz, .done

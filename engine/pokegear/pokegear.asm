@@ -748,10 +748,12 @@ PokegearMap_UpdateCursorPosition:
 	ret
 
 TownMap_GetJohtoLandmarkLimits:
+; TODO: Change these to the last and first landmarks of the Johto region.
 	lb de, SILVER_CAVE, NEW_BARK_TOWN
 	ret
 
 TownMap_GetKantoLandmarkLimits:
+; TODO: Change these to the last and first landmarks of the Kanto region, depending on postgame.
 	lb de, ROUTE_28, ROUTE_27
 	ld a, [wStatusFlags]
 	bit STATUSFLAGS_HALL_OF_FAME_F, a

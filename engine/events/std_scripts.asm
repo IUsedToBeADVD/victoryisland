@@ -360,7 +360,8 @@ BugContestResultsWarpScript:
 	setevent EVENT_ROUTE_36_NATIONAL_PARK_GATE_OFFICER_CONTEST_DAY
 	clearevent EVENT_ROUTE_36_NATIONAL_PARK_GATE_OFFICER_NOT_CONTEST_DAY
 	setevent EVENT_WARPED_FROM_ROUTE_35_NATIONAL_PARK_GATE
-	warp ROUTE_36_NATIONAL_PARK_GATE, $0, $4
+; TODO: Uncomment this if you restore the Bug-Catching Contest.
+;	warp ROUTE_36_NATIONAL_PARK_GATE, 0, 4
 	applymovement PLAYER, Movement_ContestResults_WalkAfterWarp
 	; fallthrough
 
@@ -423,8 +424,9 @@ BugContestResultsScript:
 	waitbutton
 .CleanUp
 	closetext
-	setscene $0
-	setmapscene ROUTE_35_NATIONAL_PARK_GATE, $0
+; TODO: Uncomment this if you restore the Bug-Catching Contest.
+;	setscene SCENE_ROUTE36NATIONALPARKGATE_NOOP
+;	setmapscene ROUTE_35_NATIONAL_PARK_GATE, SCENE_ROUTE35NATIONALPARKGATE_NOOP
 	setevent EVENT_BUG_CATCHING_CONTESTANT_1A
 	setevent EVENT_BUG_CATCHING_CONTESTANT_2A
 	setevent EVENT_BUG_CATCHING_CONTESTANT_3A
@@ -1733,6 +1735,7 @@ VendingMachineScript:
 	db "Cancel@"
 
 TreeGrottoScript:
+; TODO : reinstate hidden grottos here
 	scall _HiddenGrottoInitScript
 	iffalse_endtext
 	closetext
@@ -1740,7 +1743,7 @@ TreeGrottoScript:
 	special FadeOutPalettes
 	pause 15
 	callasm _HiddenGrottoBackupMap
-	warpfacing UP, HIDDEN_TREE_GROTTO, 4, 15
+	warpfacing UP, NEW_BARK_TOWN, 15, 6 ;HIDDEN_TREE_GROTTO, 4, 15
 	end
 
 CaveGrottoScript:
@@ -1751,7 +1754,7 @@ CaveGrottoScript:
 	special FadeOutPalettes
 	pause 15
 	callasm _HiddenGrottoBackupMap
-	warpfacing UP, HIDDEN_CAVE_GROTTO, 35, 85
+	warpfacing UP, NEW_BARK_TOWN, 15, 6 ;HIDDEN_CAVE_GROTTO, 35, 85
 	end
 
 _HiddenGrottoInitScript:

@@ -31,7 +31,8 @@ LizPhoneScript2:
 .next:
 	farscall PhoneScript_Random2
 	ifequalfwd $0, LizGossip
-	checkflag ENGINE_FLYPOINT_GOLDENROD
+; TODO: Change this flypoint to a midgame one like Goldenrod.
+	checkflag ENGINE_FLYPOINT_NEW_BARK
 	iffalsefwd .Generic
 	farscall PhoneScript_Random2
 	ifequalfwd $0, LizWantsBattle

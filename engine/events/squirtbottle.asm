@@ -10,18 +10,20 @@ _Squirtbottle:
 	special UpdateTimePals
 	callasm .CheckCanUseSquirtbottle
 	iffalsefwd .NothingHappenedScript
-	farsjump WateredWeirdTreeScript
+; TODO: Define WateredWeirdTreeScript on the map of the Squirtbottle Sudowoodo.
+	farsjump ObjectEvent ; WateredWeirdTreeScript
 
 .NothingHappenedScript:
 	farjumptext _SquirtbottleNothingText
 
 .CheckCanUseSquirtbottle:
+; TODO: Replace GROUP_NONE and MAP_NONE with the map of the Squirtbottle Sudowoodo.
 	ld a, [wMapGroup]
-	cp GROUP_ROUTE_36
+	cp GROUP_NONE ; ROUTE_36
 	jr nz, .nope
 
 	ld a, [wMapNumber]
-	cp MAP_ROUTE_36
+	cp MAP_NONE ; ROUTE_36
 	jr nz, .nope
 
 	farcall GetFacingObject

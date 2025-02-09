@@ -4,8 +4,8 @@ PlayersHouse1F_MapScriptHeader:
 	def_callbacks
 
 	def_warp_events
-	warp_event  8,  7, NEW_BARK_TOWN, 2
-	warp_event  9,  7, NEW_BARK_TOWN, 2
+	warp_event  8,  7, NEW_BARK_TOWN, 1
+	warp_event  9,  7, NEW_BARK_TOWN, 1
 	warp_event 11,  0, PLAYERS_HOUSE_2F, 1
 
 	def_coord_events
@@ -70,6 +70,7 @@ MomEventScript:
 	callstd receiveitem
 	setflag ENGINE_POKEGEAR
 	setflag ENGINE_PHONE_CARD
+	setflag ENGINE_MAP_CARD
 	addcellnum PHONE_MOM
 	setscene $1
 	setevent EVENT_PLAYERS_HOUSE_MOM_1
@@ -98,6 +99,10 @@ MomEventScript:
 .NoInstructions:
 	writetext MomOutroText
 	waitbutton
+	writetext GetStarterText
+	promptbutton
+	waitsfx
+	givepoke PIKACHU, PLAIN_FORM, 5, ORAN_BERRY
 	closetext
 	turnobject PLAYERSHOUSE1F_MOM1, LEFT
 	special RestartMapMusic
@@ -250,6 +255,19 @@ MomInstructionsText:
 MomOutroText:
 	text "Gee, aren't they"
 	line "convenient?"
+	done
+
+GetStarterText:
+	text "One more thing!"
+	line "Here's your first"
+	cont "#MON!"
+	done
+
+ReceivedStarterText:
+	text "<PLAYER> received"
+	line "@"
+	text_ram wStringBuffer3
+	text "!"
 	done
 
 MomErrandText:

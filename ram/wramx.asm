@@ -1044,95 +1044,21 @@ wFarfetchdPosition:: db
 
 ; map triggers
 wAlways0SceneID:: db
-wAzaleaTownSceneID:: db
 wBattleFacilitySceneID:: db
-wRoute39RuggedRoadGateSceneID:: db
-wRuggedRoadSouthSceneID:: db
-wSnowtopMountainOutsideSceneID:: db
 wBattleTowerOutsideSceneID:: db
-wBellchimeTrailSceneID:: db
 wBrunosRoomSceneID:: db
-wBurnedTower1FSceneID:: db
-wBurnedTowerB1FSceneID:: db
-wCeruleanCapeSceneID:: db
-wCeruleanCave1FSceneID:: db
-wCeruleanGymSceneID:: db
-wCherrygroveCitySceneID:: db
-wCianwoodCitySceneID:: db
-wCinnabarLabSceneID:: db
 wColosseumSceneID:: db
-wDarkCaveVioletEntranceSceneID:: db
-wDayCareSceneID:: db
-wDragonsDenB1FSceneID:: db
-wDragonShrineSceneID:: db
-wEcruteakGymSceneID:: db
-wEcruteakHouseSceneID:: db
-	ds 1 ; unused
-wElmsLabSceneID:: db
-wFarawayIslandSceneID:: db
-wFastShip1FSceneID:: db
-wFastShipB1FSceneID:: db
-wGiovannisCaveSceneID:: db
-wGoldenrodCitySceneID:: db
-wGoldenrodGymSceneID:: db
-wGoldenrodMuseum1FSceneID:: db
 wHallOfFameSceneID:: db
-wIlexForestSceneID:: db
 wKarensRoomSceneID:: db
 wKogasRoomSceneID:: db
-wPlayersHouse1FSceneID:: db
 wLancesRoomSceneID:: db
-wLavenderTownSceneID:: db
-wMahoganyMart1FSceneID:: db
-wMahoganyTownSceneID:: db
-wMountMoon1FSceneID:: db
-wMrPokemonsHouseSceneID:: db
-wMystriStageSceneID:: db
 wNewBarkTownSceneID:: db
-wOlivineCitySceneID:: db
-wOlivinePortSceneID:: db
+wPlayersHouse1FSceneID:: db
 wPokecenter2FSceneID:: db
-wPokemonLeagueGateSceneID:: db
-wPowerPlantSceneID:: db
-wRadioTower5FSceneID:: db
-wRoute10NorthSceneID:: db
-wRoute23SceneID:: db
-wRoute24SceneID:: db
-wRoute27SceneID:: db
-wRoute29SceneID:: db
-wRoute32SceneID:: db
-wRoute34SceneID:: db
-wRoute35NationalParkGateSceneID:: db
-wRoute36NationalParkGateSceneID:: db
-wRoute36SceneID:: db
-wRoute42SceneID:: db
-wRoute43GateSceneID:: db
-wRoute47SceneID:: db
-wRoute48SceneID:: db
-wRuinsOfAlphAerodactylChamberSceneID:: db
-wRuinsOfAlphHoOhChamberSceneID:: db
-wRuinsOfAlphInnerChamberSceneID:: db
-wRuinsOfAlphKabutoChamberSceneID:: db
-wRuinsOfAlphOmanyteChamberSceneID:: db
-wRuinsOfAlphOutsideSceneID:: db
-wRuinsOfAlphResearchCenterSceneID:: db
-wSeagallopFerryNavelGateSceneID:: db
-wSeagallopFerryShamoutiGateSceneID:: db
-wSeagallopFerryVermilionGateSceneID:: db
-wShamoutiHotelRestaurantSceneID:: db
-wSproutTower3FSceneID:: db
-wTeamRocketBaseB2FSceneID:: db
-wTeamRocketBaseB3FSceneID:: db
-wTinTower1FSceneID:: db
 wTradeCenterSceneID:: db
-wUndergroundPathSwitchRoomEntrancesSceneID:: db
-wVermilionCitySceneID:: db
-wVermilionPortSceneID:: db
-wVictoryRoad2FSceneID:: db
-wVioletGymSceneID:: db
 wWillsRoomSceneID:: db
-wWiseTriosRoomSceneID:: db
-wYellowForestSceneID:: db
+
+		ds 76
 
 ; fight counts
 wJackFightCount::    db
@@ -1305,6 +1231,8 @@ wPlayerDataEnd::
 wCurMapData::
 
 wVisitedSpawns:: flag_array NUM_SPAWNS
+
+		ds 4 ; deleted spawn points (see data/maps/spawn_points.asm and constants/map_data_constants.asm)
 
 wDigWarpNumber:: db
 wDigMapGroup:: db

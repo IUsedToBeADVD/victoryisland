@@ -51,12 +51,13 @@ InitMapNameSign::
 .not_lucky_island
 
 ; Vermilion City runs a scene_script by default
+; TODO : Specify any maps that run a scene_script by default (?)
 	ld a, [wCurLandmark]
 	cp VERMILION_CITY
-	jr nz, .not_vermilion_city
-	ld a, [wVermilionCitySceneID]
-	and a
-	jr z, .dont_do_map_sign
+	jr .not_vermilion_city ;jr nz
+	;ld a, [wVermilionCitySceneID]
+	;and a
+	;jr z, .dont_do_map_sign
 .not_vermilion_city
 
 ; Landmark sign timer: descends $74-$00
@@ -137,23 +138,24 @@ InitMapNameSign::
 	ret
 
 .CheckExcludedMap:
+; TODO: Uncomment this if you restore the Bug-Catching Contest.
 	ld a, [wMapGroup]
-	assert GROUP_ROUTE_35_NATIONAL_PARK_GATE == GROUP_ROUTE_36_NATIONAL_PARK_GATE
-	cp GROUP_ROUTE_35_NATIONAL_PARK_GATE
+	;assert GROUP_ROUTE_35_NATIONAL_PARK_GATE == GROUP_ROUTE_36_NATIONAL_PARK_GATE
+	cp GROUP_NONE ; ROUTE_35_NATIONAL_PARK_GATE
 	jr nz, .not_national_park_gate
 	ld a, [wMapNumber]
-	cp MAP_ROUTE_35_NATIONAL_PARK_GATE
+	cp MAP_NONE ; ROUTE_35_NATIONAL_PARK_GATE
 	ret z
-	cp MAP_ROUTE_36_NATIONAL_PARK_GATE
+	cp MAP_NONE ; ROUTE_36_NATIONAL_PARK_GATE
 	ret
 .not_national_park_gate
-	assert GROUP_OLIVINE_PORT == GROUP_VERMILION_PORT
-	cp GROUP_OLIVINE_PORT
+	;assert GROUP_OLIVINE_PORT == GROUP_VERMILION_PORT
+	cp GROUP_NONE ; OLIVINE_PORT
 	ret nz
 	ld a, [wMapNumber]
-	cp MAP_OLIVINE_PORT
+	cp MAP_NONE ; OLIVINE_PORT
 	ret z
-	cp MAP_VERMILION_PORT
+	cp MAP_NONE ; VERMILION_PORT
 	ret
 
 PlaceMapNameSign::

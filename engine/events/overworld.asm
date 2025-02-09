@@ -667,9 +667,10 @@ CheckFlyAllowedOnMap:
 	ld a, e
 	cp ORANGE_REGION
 	jr nz, .not_orange
-	ld a, [wVisitedSpawns + SPAWN_SHAMOUTI / 8]
-	bit SPAWN_SHAMOUTI % 8, a
-	jr z, .no_fly
+	; ld a, [wVisitedSpawns + SPAWN_SHAMOUTI / 8]
+	; bit SPAWN_SHAMOUTI % 8, a
+	; jr z, .no_fly
+	jr .no_fly
 .not_orange
 	call GetMapEnvironment
 	call CheckOutdoorMap

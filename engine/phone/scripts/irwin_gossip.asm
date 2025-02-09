@@ -7,7 +7,8 @@ IrwinRumorScript:
 	iftruefwd .TrainPass
 	checkflag ENGINE_SOULBADGE
 	iftruefwd .MarshBadge
-	checkflag ENGINE_FLYPOINT_VERMILION
+; TODO: Change this flypoint and the various other dialog conditions.
+	checkflag ENGINE_FLYPOINT_NEW_BARK
 	iftruefwd .VermilionCity
 	checkevent EVENT_BEAT_ELITE_FOUR
 	iftruefwd .EliteFour

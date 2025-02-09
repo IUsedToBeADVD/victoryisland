@@ -26,12 +26,13 @@ MomPhoneLandmark:
 	sjumpfwd MomSavingMoney
 
 MomPhoneInTown:
+; TODO: Pick maps for Mom's phone dialog to change.
 	readvar VAR_MAPGROUP
 	ifequalfwd GROUP_NEW_BARK_TOWN, .newbark
-	ifequalfwd GROUP_CHERRYGROVE_CITY, .cherrygrove
-	ifequalfwd GROUP_VIOLET_CITY, .violet
-	ifequalfwd GROUP_AZALEA_TOWN, .azalea
-	ifequalfwd GROUP_GOLDENROD_CITY, .goldenrod
+	ifequalfwd GROUP_NONE, .cherrygrove
+	ifequalfwd GROUP_NONE, .violet
+	ifequalfwd GROUP_NONE, .azalea
+	ifequalfwd GROUP_NONE, .goldenrod
 	farwritetext MomPhoneGenericAreaText
 	promptbutton
 	sjumpfwd MomSavingMoney

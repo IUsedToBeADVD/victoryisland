@@ -204,11 +204,12 @@ MarkUsedPal:
 	jmp PopBCDEHL
 
 CheckAlolanExeggutorPals:
+; TODO : reinstate alolan exeggutor overworld palettes
 	ld a, [wMapGroup]
-	cp GROUP_SHAMOUTI_ISLAND
+	cp GROUP_NONE ;SHAMOUTI_ISLAND
 	ret nz
 	ld a, [wMapNumber]
-	cp MAP_SHAMOUTI_ISLAND
+	cp MAP_NONE ;SHAMOUTI_ISLAND
 	ret nz
 
 ; Only Shamouti Island uses SPRITEMOVEDATA_ALOLAN_EXEGGUTOR.
