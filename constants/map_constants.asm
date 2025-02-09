@@ -52,4 +52,9 @@ ENDM
 	map_const PLAYERS_HOUSE_1F,                            6,  4 ;  2
 	map_const PLAYERS_HOUSE_2F,                            4,  3 ;  3
 
-DEF NUM_MAP_GROUPS EQU const_value ; 4
+	newgroup													 ;  5
+	map_const COLLUMITO_SHIP_CABINS,					  18,  4 ;  1
+	map_const COLLUMITO_SHIP,					          10,  9 ;  2
+	map_const COLLUMITO_SHIP_KITCHEN,					   7,  7 ;  3
+
+DEF NUM_MAP_GROUPS EQU const_value ; 5

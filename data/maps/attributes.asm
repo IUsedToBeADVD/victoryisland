@@ -26,6 +26,10 @@ ENDM
 	map_attributes BattleTowerOutside, BATTLE_TOWER_OUTSIDE, $5, 0
 	map_attributes PlayersHouse1F, PLAYERS_HOUSE_1F, $0, 0
 	map_attributes PlayersHouse2F, PLAYERS_HOUSE_2F, $0, 0
+	; start of Victory Island maps
+	map_attributes CollumitoShipCabins, COLLUMITO_SHIP_CABINS, $0, 0
+	map_attributes CollumitoShip, COLLUMITO_SHIP, $0, 0
+	map_attributes CollumitoShipKitchen, COLLUMITO_SHIP_KITCHEN, $0, 0
 	
 	
 	

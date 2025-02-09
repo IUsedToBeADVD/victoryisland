@@ -461,7 +461,7 @@ endc
 
 WillsRoomPalette:
 if !DEF(MONOCHROME)
-INCLUDE "maps/WillsRoom.pal"
+INCLUDE "maps/crystal/WillsRoom.pal"
 else
 rept 7
 	MONOCHROME_RGB_FOUR
@@ -474,7 +474,7 @@ endc
 
 KogasRoomPalette:
 if !DEF(MONOCHROME)
-INCLUDE "maps/KogasRoom.pal"
+INCLUDE "maps/crystal/KogasRoom.pal"
 else
 rept 7
 	MONOCHROME_RGB_FOUR
@@ -487,7 +487,7 @@ endc
 
 BrunosRoomPalette:
 if !DEF(MONOCHROME)
-INCLUDE "maps/BrunosRoom.pal"
+INCLUDE "maps/crystal/BrunosRoom.pal"
 else
 rept 7
 	MONOCHROME_RGB_FOUR
@@ -500,7 +500,7 @@ endc
 
 KarensRoomPalette:
 if !DEF(MONOCHROME)
-INCLUDE "maps/KarensRoom.pal"
+INCLUDE "maps/crystal/KarensRoom.pal"
 else
 rept 7
 	MONOCHROME_RGB_FOUR_NIGHT
@@ -513,7 +513,7 @@ endc
 
 LancesRoomPalette:
 if !DEF(MONOCHROME)
-INCLUDE "maps/LancesRoom.pal"
+INCLUDE "maps/crystal/LancesRoom.pal"
 else
 rept 7
 	MONOCHROME_RGB_FOUR
