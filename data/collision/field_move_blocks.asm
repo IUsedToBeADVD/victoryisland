@@ -1,7 +1,7 @@
 CutGrassBlockPointers:
 ; Which tileset are we in?
-	dbw TILESET_JOHTO_TRADITIONAL, .johto_traditional
-	dbw TILESET_JOHTO_MODERN, .johto_modern
+	dbw TILESET_ISLAND_TRADITIONAL, .island_traditional
+	dbw TILESET_ISLAND_MODERN, .island_modern
 	dbw TILESET_JOHTO_OVERCAST, .johto_overcast
 	dbw TILESET_KANTO, .kanto
 	dbw TILESET_INDIGO_PLATEAU, .indigo_plateau
@@ -17,8 +17,8 @@ CutGrassBlockPointers:
 
 .shamouti_island
 	db $95, $4c
-.johto_traditional
-.johto_modern
+.island_traditional
+.island_modern
 .johto_overcast
 .valencia_island
 	db $03, $02
@@ -85,16 +85,16 @@ CutGrassBlockPointers:
 	db -1
 
 WhirlpoolBlockPointers:
-	dbw TILESET_JOHTO_TRADITIONAL, .johto_traditional
-	dbw TILESET_JOHTO_MODERN, .johto_modern
+	dbw TILESET_ISLAND_TRADITIONAL, .island_traditional
+	dbw TILESET_ISLAND_MODERN, .island_modern
 	dbw TILESET_JOHTO_OVERCAST, .johto_overcast
 	db -1
 
-.johto_traditional
+.island_traditional
 .johto_overcast
 	db $07, $07
 	db -1
 
-.johto_modern
+.island_modern
 	db $83, $83
 	db -1

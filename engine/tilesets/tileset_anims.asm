@@ -35,8 +35,11 @@ TilesetJohto3Anim::
 TilesetJohto4Anim::
 TilesetJohto5Anim::
 	dw vTiles2 tile $14, AnimateWaterTile
-	dw vTiles2 tile $1c, AnimateRainPuddleTile
-	dw vTiles2 tile $1d, AnimateRainWaterTile
+	dw vTiles2 tile $7d, AnimateRainPuddleTile
+	dw vTiles2 tile $7e, AnimateRainWaterTile
+	dw vTiles2 tile $38, AnimateShorelineXTile
+	dw vTiles2 tile $37, AnimateShorelineYTile
+	dw vTiles2 tile $39, AnimateShorelineCornerTile
 	dw NULL,  DoNothing
 	dw NULL,  DoNothing
 	dw NULL,  AnimateFlowerTile
@@ -46,7 +49,7 @@ TilesetJohto5Anim::
 	dw WhirlpoolFrames4, AnimateWhirlpoolTile
 	dw NULL,  DoNothing
 	dw NULL,  StandingTileFrame8
-	dw vTiles2 tile $35, WriteTileToBuffer
+	dw vTiles2 tile $18, WriteTileToBuffer
 	dw NULL,  DoNothing
 	dw wTileAnimBuffer, ScrollTileDown
 	dw NULL,  DoNothing
@@ -54,7 +57,7 @@ TilesetJohto5Anim::
 	dw NULL,  DoNothing
 	dw wTileAnimBuffer, ScrollTileDown
 	dw NULL,  DoNothing
-	dw vTiles2 tile $35, ReadTileFromBuffer
+	dw vTiles2 tile $18, ReadTileFromBuffer
 	dw NULL,  DoneTileAnimation
 
 TilesetKanto1Anim::
@@ -1139,6 +1142,78 @@ INCBIN "gfx/tilesets/lcd/6.2bpp"
 INCBIN "gfx/tilesets/lcd/7.2bpp"
 INCBIN "gfx/tilesets/lcd/8.2bpp"
 
+AnimateShorelineXTile:
+	ld hl, sp + 0
+	ld b, h
+	ld c, l
+
+	; period 4, every 2 frames, offset to 1 tile (16 bytes)
+	ld a, [wTileAnimationTimer]
+	maskbits 4, 1
+	add a
+	add a
+	add a
+
+	add LOW(.ShorelineXTileFrames)
+	ld l, a
+	adc HIGH(.ShorelineXTileFrames)
+	sub l
+	ld h, a
+
+	ld sp, hl
+	jmp WriteTileToDE
+
+.ShorelineXTileFrames:
+INCBIN "gfx/tilesets/water/shoreline_x.2bpp"
+
+AnimateShorelineYTile:
+	ld hl, sp + 0
+	ld b, h
+	ld c, l
+
+	; period 4, every 2 frames, offset to 1 tile (16 bytes)
+	ld a, [wTileAnimationTimer]
+	maskbits 4, 1
+	add a
+	add a
+	add a
+
+	add LOW(.ShorelineYTileFrames)
+	ld l, a
+	adc HIGH(.ShorelineYTileFrames)
+	sub l
+	ld h, a
+
+	ld sp, hl
+	jmp WriteTileToDE
+
+.ShorelineYTileFrames:
+INCBIN "gfx/tilesets/water/shoreline_y.2bpp"
+
+AnimateShorelineCornerTile:
+	ld hl, sp + 0
+	ld b, h
+	ld c, l
+
+	; period 4, every 2 frames, offset to 1 tile (16 bytes)
+	ld a, [wTileAnimationTimer]
+	maskbits 4, 1
+	add a
+	add a
+	add a
+
+	add LOW(.ShorelineCornerTileFrames)
+	ld l, a
+	adc HIGH(.ShorelineCornerTileFrames)
+	sub l
+	ld h, a
+
+	ld sp, hl
+	jmp WriteTileToDE
+
+.ShorelineCornerTileFrames:
+INCBIN "gfx/tilesets/water/shoreline_corner.2bpp"
+
 WriteTileToBuffer:
 	ld hl, sp + 0
 	ld b, h
@@ -1238,10 +1313,10 @@ TowerPillarTile8:  INCBIN "gfx/tilesets/tower-pillar/8.2bpp"
 TowerPillarTile9:  INCBIN "gfx/tilesets/tower-pillar/9.2bpp"
 TowerPillarTile10: INCBIN "gfx/tilesets/tower-pillar/10.2bpp"
 
-WhirlpoolFrames1: dw vTiles2 tile $31, WhirlpoolTiles1
-WhirlpoolFrames2: dw vTiles2 tile $32, WhirlpoolTiles2
-WhirlpoolFrames3: dw vTiles2 tile $41, WhirlpoolTiles3
-WhirlpoolFrames4: dw vTiles2 tile $42, WhirlpoolTiles4
+WhirlpoolFrames1: dw vTiles2 tile $18, WhirlpoolTiles1
+WhirlpoolFrames2: dw vTiles2 tile $19, WhirlpoolTiles2
+WhirlpoolFrames3: dw vTiles2 tile $28, WhirlpoolTiles3
+WhirlpoolFrames4: dw vTiles2 tile $29, WhirlpoolTiles4
 
 WhirlpoolTiles1: INCBIN "gfx/tilesets/whirlpool/1.2bpp"
 WhirlpoolTiles2: INCBIN "gfx/tilesets/whirlpool/2.2bpp"

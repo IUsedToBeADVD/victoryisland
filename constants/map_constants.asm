@@ -56,5 +56,9 @@ ENDM
 	map_const COLLUMITO_SHIP_CABINS,					  18,  4 ;  1
 	map_const COLLUMITO_SHIP,					          10,  9 ;  2
 	map_const COLLUMITO_SHIP_KITCHEN,					   7,  7 ;  3
+	map_const COLLUMITO_BEACH,							  20, 18 ;  4
+	map_const ROUTE_1,									  20, 18 ;  5
+	map_const GULLEY_TOWN,								  16, 10 ;  6
+	map_const ROUTE_2,								  	  24, 18 ;  7
 
 DEF NUM_MAP_GROUPS EQU const_value ; 5

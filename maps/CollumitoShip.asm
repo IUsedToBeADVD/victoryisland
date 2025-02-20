@@ -9,6 +9,7 @@ CollumitoShip_MapScriptHeader:
     warp_event 15,  8, COLLUMITO_SHIP_CABINS, 3
     warp_event  5, 15, COLLUMITO_SHIP_KITCHEN, 1
     warp_event 15, 15, COLLUMITO_SHIP_KITCHEN, 4
+	warp_event  9,  1, COLLUMITO_BEACH, 2
 
 	def_coord_events
 

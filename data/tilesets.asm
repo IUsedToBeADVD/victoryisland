@@ -63,24 +63,24 @@ TilesetJohto1GFX0::
 TilesetJohto2GFX0::
 TilesetJohto3GFX0::
 TilesetJohto4GFX0::
-TilesetJohto5GFX0:: INCBIN "gfx/tilesets/johto_common.2bpp.lz"
+TilesetJohto5GFX0:: INCBIN "gfx/tilesets/island_common.2bpp.lz"
 
 TilesetJohto1GFX1::
-TilesetJohto5GFX1:: INCBIN "gfx/tilesets/johto_traditional.johto_common.2bpp.vram0.lz"
+TilesetJohto5GFX1:: INCBIN "gfx/tilesets/island_traditional.island_common.2bpp.vram0.lz"
 
-TilesetJohto2GFX1:: INCBIN "gfx/tilesets/johto_modern.johto_common.2bpp.vram0.lz"
+TilesetJohto2GFX1:: INCBIN "gfx/tilesets/island_modern.island_common.2bpp.vram0.lz"
 
-TilesetJohto3GFX1:: INCBIN "gfx/tilesets/johto_overcast.johto_common.2bpp.vram0.lz"
+TilesetJohto3GFX1:: INCBIN "gfx/tilesets/johto_overcast.island_common.2bpp.vram0.lz"
 
-TilesetJohto4GFX1:: INCBIN "gfx/tilesets/battle_tower_outside.johto_common.2bpp.lz"
+TilesetJohto4GFX1:: INCBIN "gfx/tilesets/battle_tower_outside.island_common.2bpp.lz"
 
-TilesetJohto1Meta:: INCBIN "data/tilesets/johto_traditional_metatiles.bin.lz"
-TilesetJohto1Attr:: INCBIN "data/tilesets/johto_traditional_attributes.bin.lz"
-TilesetJohto1Coll:: INCBIN "data/tilesets/johto_traditional_collision.bin.lz"
+TilesetJohto1Meta:: INCBIN "data/tilesets/island_traditional_metatiles.bin.lz"
+TilesetJohto1Attr:: INCBIN "data/tilesets/island_traditional_attributes.bin.lz"
+TilesetJohto1Coll:: INCBIN "data/tilesets/island_traditional_collision.bin.lz"
 
-TilesetJohto2Meta:: INCBIN "data/tilesets/johto_modern_metatiles.bin.lz"
-TilesetJohto2Attr:: INCBIN "data/tilesets/johto_modern_attributes.bin.lz"
-TilesetJohto2Coll:: INCBIN "data/tilesets/johto_modern_collision.bin.lz"
+TilesetJohto2Meta:: INCBIN "data/tilesets/island_modern_metatiles.bin.lz"
+TilesetJohto2Attr:: INCBIN "data/tilesets/island_modern_attributes.bin.lz"
+TilesetJohto2Coll:: INCBIN "data/tilesets/island_modern_collision.bin.lz"
 
 TilesetJohto3Meta:: INCBIN "data/tilesets/johto_overcast_metatiles.bin.lz"
 TilesetJohto3Attr:: INCBIN "data/tilesets/johto_overcast_attributes.bin.lz"
@@ -487,11 +487,11 @@ TilesetSnowtopMountainColl:: INCBIN "data/tilesets/snowtop_mountain_collision.bi
 SECTION "Tileset GFX2 Data", ROMX
 
 TilesetJohto1GFX2::
-TilesetJohto5GFX2:: INCBIN "gfx/tilesets/johto_traditional.johto_common.2bpp.vram1.lz"
+TilesetJohto5GFX2:: INCBIN "gfx/tilesets/island_traditional.island_common.2bpp.vram1.lz"
 
-TilesetJohto2GFX2:: INCBIN "gfx/tilesets/johto_modern.johto_common.2bpp.vram1.lz"
+TilesetJohto2GFX2:: INCBIN "gfx/tilesets/island_modern.island_common.2bpp.vram1.lz"
 
-TilesetJohto3GFX2:: INCBIN "gfx/tilesets/johto_overcast.johto_common.2bpp.vram1.lz"
+TilesetJohto3GFX2:: INCBIN "gfx/tilesets/johto_overcast.island_common.2bpp.vram1.lz"
 
 TilesetJohto4GFX2::
 TilesetKanto1GFX2::

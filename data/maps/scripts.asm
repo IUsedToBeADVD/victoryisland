@@ -26,6 +26,12 @@ SECTION "Collumito Scripts", ROMX
 INCLUDE "maps/CollumitoShipCabins.asm"
 INCLUDE "maps/CollumitoShip.asm"
 INCLUDE "maps/CollumitoShipKitchen.asm"
+INCLUDE "maps/CollumitoBeach.asm"
+INCLUDE "maps/Route1.asm"
+
+SECTION "Gulley Scripts", ROMX
+INCLUDE "maps/GulleyTown.asm"
+INCLUDE "maps/Route2.asm"
 
 
 SECTION "Hidden Grotto Scripts", ROMX

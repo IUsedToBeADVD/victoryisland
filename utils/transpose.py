@@ -11,7 +11,7 @@ Transposes the bytes of the metatiles.bin and attributes.bin files.
 tilesets_moved = {}
 
 tileset_maps = {
-'johto_traditional': ['NewBarkTown'],
+'island_traditional': ['NewBarkTown'],
 }
 
 BANK1 = 1 << 3

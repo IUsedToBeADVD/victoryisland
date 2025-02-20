@@ -21,6 +21,26 @@ CollumitoShipKitchen_BlockData:
 	INCBIN "maps/CollumitoShipKitchen.ablk.lz"
 
 
+SECTION "CollumitoBeach_BlockData", ROMX
+CollumitoBeach_BlockData:
+	INCBIN "maps/CollumitoBeach.ablk.lz"
+
+
+SECTION "Route1_BlockData", ROMX
+Route1_BlockData:
+	INCBIN "maps/Route1.ablk.lz"
+
+
+SECTION "GulleyTown_BlockData", ROMX
+GulleyTown_BlockData:
+	INCBIN "maps/GulleyTown.ablk.lz"
+
+
+SECTION "Route2_BlockData", ROMX
+Route2_BlockData:
+	INCBIN "maps/Route2.ablk.lz"
+
+
 SECTION "TradeCenter_BlockData", ROMX
 TradeCenter_BlockData:
 	INCBIN "maps/crystal/TradeCenter.ablk.lz"
