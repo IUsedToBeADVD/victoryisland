@@ -220,12 +220,12 @@ DoPlayerMovement::
 ; Surfing actually calls .TrySurf directly instead of passing through here.
 	ld a, [wPlayerState]
 	cp PLAYER_SURF
-	jr z, .TrySurf
+	jp z, .TrySurf
 	cp PLAYER_SURF_PIKA
-	jr z, .TrySurf
+	jp z, .TrySurf
 
 	call .CheckLandPerms
-	jr c, .bump
+	jp c, .bump
 
 	ld a, [wPanningAroundTinyMap]
 	and a
@@ -233,9 +233,9 @@ DoPlayerMovement::
 
 	call .CheckNPC
 	and a
-	jr z, .bump
+	jp z, .bump
 	cp 2
-	jr z, .bump
+	jp z, .bump
 
 	ld a, [wSpinning]
 	and a
@@ -266,13 +266,27 @@ DoPlayerMovement::
 	ret
 
 .fast
+	ld a, [wPlayerTileCollision]
+	cp COLL_STAIRS
+	jr z, .BikeOnStairs
 	ld a, STEP_BIKE
+	jr .continue1
+.BikeOnStairs
+	ld a, STEP_RUN
+.continue1
 	call .DoStep
 	scf
 	ret
 
 .walk
+	ld a, [wPlayerTileCollision]
+	cp COLL_STAIRS
+	jr z, .WalkOnStairs
 	ld a, STEP_WALK
+	jr .continue2
+.WalkOnStairs
+	ld a, STEP_SLOW
+.continue2
 	call .DoStep
 	scf
 	ret
@@ -284,7 +298,14 @@ DoPlayerMovement::
 	ret
 
 .run
+	ld a, [wPlayerTileCollision]
+	cp COLL_STAIRS
+	jr z, .RunOnStairs
 	ld a, STEP_RUN
+	jr .continue3
+.RunOnStairs
+	ld a, STEP_WALK
+.continue3
 	call .DoStep
 ; Trainer faces player if they're running
 	push af

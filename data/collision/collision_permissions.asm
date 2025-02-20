@@ -100,7 +100,7 @@ CollisionPermissionTable::
 	db LAND_TILE  ; 61
 	db LAND_TILE  ; 62
 	db LAND_TILE  ; 63
-	db LAND_TILE  ; 64
+	db LAND_TILE  ; COLL_STAIRS
 	db LAND_TILE  ; 65
 	db LAND_TILE  ; 66
 	db LAND_TILE  ; 67
